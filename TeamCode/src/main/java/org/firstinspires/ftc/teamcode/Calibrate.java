@@ -111,8 +111,8 @@ public class Calibrate extends LinearOpMode {
         // encoderDrive(DRIVE_SPEED,  48,  48, 5.0);
         // Turn right
         //encoderDrive(TURN_SPEED,   12, -12, 4.0);
-        // Run arcing to right, one radian
-        turnAngleRadiusDrive(DRIVE_SPEED, 1.0, 40);
+        // Run curving to right, one radian
+        turnAngleRadiusDrive(DRIVE_SPEED, 1.00, 40);
 
         telemetry.addData("Path", "Complete");
         telemetry.update();
