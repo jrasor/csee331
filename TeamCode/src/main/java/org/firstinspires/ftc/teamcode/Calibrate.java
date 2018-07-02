@@ -39,22 +39,23 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
 
 /**
  * This file illustrates the concept of driving a path based on encoder counts.
- * It uses the common Pushbot hardware class to define the drive on the robot.
+ * It uses the Trainerbot hardware class to define the drive on the robot.
  * The code is structured as a LinearOpMode.
  *
  * The code REQUIRES that you DO have encoders on the wheels,
- *   otherwise you would use: PushbotAutoDriveByTime;
+ *   otherwise you would start with sample PushbotAutoDriveByTime.
  *
- *  This code ALSO requires that the drive Motors have been configured such that a positive
- *  power command moves them forwards, and causes the encoders to count UP.
+ *  This code ALSO requires that the drive Motors have been configured such
+ *  that a positive power command moves them forwards, and causes the
+ *  encoders to count UP.
  *
- *  The code contains several fundamental movements, like driving straight,
- *  driving in an arc, or turning in itself. To calibrate, uncomment one,
+ *  The code contains several fundamental robot movements, like driving
+ *  straight, driving in an arc, or turning on itself. To calibrate, uncomment one,
  *  predict where the robot should go, run the movement, and see if the robot
  *  actually waent there.
  *
  *  The fundamental movements are wrappers for encoderDrive(speed, leftInches,
- *  rightInches, timeoutS) that performs the actual movement.
+ *  rightInches, timeoutS). That method does the actual movement.
  *
  *  This code uses the RUN_TO_POSITION mode to enable the Motor controllers
  *  to generate the run profile.

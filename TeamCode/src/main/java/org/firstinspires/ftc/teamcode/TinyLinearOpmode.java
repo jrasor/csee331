@@ -35,16 +35,19 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 
 /**
- * This file contains an minimal example of a Linear "OpMode". An OpMode is a 'program' that runs in either
- * the autonomous or the teleop period of an FTC match. The names of OpModes appear on the menu
- * of the FTC Driver Station. When an selection is made from the menu, the corresponding OpMode
+ * This file contains a minimal example of a Linear "OpMode". An OpMode is a
+ * 'program' that runs in either the autonomous or the teleop period of an
+ * FTC  match. The names of OpModes appear on the menu of the FTC Driver
+ * Station. When an selection is made from the menu, the corresponding OpMode
  * class is instantiated on the Robot Controller and executed.
  *
- * This particular OpMode just reports elapsed time.
- * It includes all the skeletal structure that all linear OpModes contain.
+ * This particular OpMode just reports the time it's been running. You do
+ * not need a robot to run it, just a Robot Controller phone and a Driver
+ * Station phone. Use it to see if Android Studio and the control system are
+ * working. If so, go to one of the other opmodes, study and improve it.
  *
- * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
- * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
+ * It is copied from sample FtcRobotController external sample
+ * BasicOpMode_linear.
  */
 
 @TeleOp(name="Tiny Linear OpMode", group="Linear Opmode")

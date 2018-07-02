@@ -38,16 +38,19 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 /**
  * This is NOT an opmode.
  *
- * This class can be used to define all the specific hardware for a single robot.
- * In this case that robot is a Trainerbot.
- * See PushbotTeleopTank_Iterative and others classes starting with "Pushbot" for usage examples.
+ * This class can be used to define all the specific hardware for a single
+ * robot, a Trainerbot.
+ * See PushbotTeleopTank_Iterative and others classes starting with "Pushbot"
+ * for usage examples easily converted to run on a Trainerbot.
  *
- * This hardware class assumes the following device names have been configured on the robot:
+ * This robot class assumes the following device names have been configured on
+ * the robot, meaning they are present in the robot configuration file:
  *
  * Motor channel:  Left  drive motor:        "motor0"
  * Motor channel:  Right drive motor:        "motor1"
  * Servo channel:  Servo to move paddle:     "paddle"
  */
+
 public class Trainerbot
 {
     // Trainerbot specific measurements
@@ -97,7 +100,8 @@ public class Trainerbot
         leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        // Define and initialize ALL installed servos.
+        // Define and initialize installed servo. If you add others,
+        // initialize them here.
         paddle  = hwMap.get(Servo.class, "paddle");
         paddle.setPosition(STOWED);
     }

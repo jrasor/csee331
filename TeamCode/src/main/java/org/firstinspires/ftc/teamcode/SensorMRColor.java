@@ -40,16 +40,17 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 
 /*
  *
- * This is an example LinearOpMode that shows how to use
- * a Modern Robotics Color Sensor.
+ * This is an example LinearOpMode that shows how to use a Modern Robotics Color Sensor.
  *
- * The op mode assumes that the color sensor
- * is configured with a name of "sensor_color".
+ * It assumes that the color sensor is configured with a name of
+ * "colorSensor". That's done in Trainerbot.xml, of which there is a copy in
+ * this project. But the one that counts is the one that rides on the Robot
+ * Controller phone.
  *
  * You can use the X button on gamepad1 to toggle the LED on and off.
  *
- * Use Android Studio to Copy this Class, and Paste it into your team's code folder with a new name.
- * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
+ * This example is copied from sample SensorMRColor and modified to suit a
+ * Trainerbot.
  */
 @TeleOp(name = "Sensor: MR Color", group = "Trainerbot")
 //@Disabled
