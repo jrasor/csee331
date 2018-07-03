@@ -1,24 +1,33 @@
 /* Copyright (c) 2017 FIRST. All rights reserved.
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted (subject to the limitations in the disclaimer below) provided that
+ * Redistribution and use in source and binary forms, with or without
+ * modification,
+ * are permitted (subject to the limitations in the disclaimer below)
+ * provided that
  * the following conditions are met:
  *
- * Redistributions of source code must retain the above copyright notice, this list
+ * Redistributions of source code must retain the above copyright notice,
+ * this list
  * of conditions and the following disclaimer.
  *
- * Redistributions in binary form must reproduce the above copyright notice, this
+ * Redistributions in binary form must reproduce the above copyright notice,
+ * this
  * list of conditions and the following disclaimer in the documentation and/or
  * other materials provided with the distribution.
  *
- * Neither the name of FIRST nor the names of its contributors may be used to endorse or
- * promote products derived from this software without specific prior written permission.
+ * Neither the name of FIRST nor the names of its contributors may be used to
+  * endorse or
+ * promote products derived from this software without specific prior written
+  * permission.
  *
- * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY
+  * THIS
  * LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE
  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
@@ -33,108 +42,62 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.view.View;
 
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 
 /*
+ * This is an example LinearOpMode that shows how to use a Modern Robotics
+ * Color Sensor. It uses the Trainerbot paddle to deploy the sensor, reads
+ * the color of a Relic Recovery game piece, and reports.
  *
- * This is an example LinearOpMode that shows how to use a Modern Robotics Color Sensor.
+ * Physical setup:
+ *   Put the Trainerbot on a Relic Recovery Field. It's probably best to stay
+ * off the Balancing Stone for now; let's keep it simple to begin with. You
+ * might be able to do this on a table; the Trainerbot is not supposed to
+ * drive anywhere.
+ *   Put a Platform (black piece of wood with two depressions and a white
+ * stripe in the middle) in front of the Trainerbot. Put a Red and a Blue
+ * Jewel in the Platform depressions.
+ *   Adjust the Trainerbot so its paddle deployed forward would put the color
+ * sensor right between the two Jewels. When this opmode runs, the paddle
+ * will begin stowed back into the Trainerbot, but will quickly deploy
+ * forward to the position you adjusted. That's where it will try to get the
+ * color of the left Jewel.
+ *   The Modern Robotics color sensor is not very sensitive, so it may help
+ * to put it closer to the left Jewel, inside 2cm. Beyond that, it's almost
+ * blind.
  *
- * It assumes that the color sensor is configured with a name of
+ * It is assumed that the color sensor is configured with a name of
  * "colorSensor". That's done in Trainerbot.xml, of which there is a copy in
- * this project. But the one that counts is the one that rides on the Robot
- * Controller phone.
- *
- * You can use the X button on gamepad1 to toggle the LED on and off.
+ * the hardware folder in the root of this project. But the one that counts is
+ * the one that rides on the Robot Controller phone.
  *
  * This example is copied from sample SensorMRColor and modified to suit a
  * Trainerbot.
  */
-@TeleOp(name = "Sensor: MR Color", group = "Trainerbot")
+@Autonomous(name = "Sensor: MR Color", group = "Trainerbot")
 //@Disabled
 public class SensorMRColor extends LinearOpMode {
 
-  ColorSensor colorSensor;    // Hardware Device Object
-
-
   @Override
   public void runOpMode() {
-
-    // hsvValues is an array that will hold the hue, saturation, and value information.
-    float hsvValues[] = {0F,0F,0F};
-
-    // values is a reference to the hsvValues array.
-    final float values[] = hsvValues;
-
-    // get a reference to the RelativeLayout so we can change the background
-    // color of the Robot Controller app to match the hue detected by the RGB sensor.
-    int relativeLayoutId = hardwareMap.appContext.getResources().getIdentifier("RelativeLayout", "id", hardwareMap.appContext.getPackageName());
-    final View relativeLayout = ((Activity) hardwareMap.appContext).findViewById(relativeLayoutId);
-
-    // bPrevState and bCurrState represent the previous and current state of the button.
-    boolean bPrevState = false;
-    boolean bCurrState = false;
-
-    // bLedOn represents the state of the LED.
-    boolean bLedOn = true;
-
-    // get a reference to our ColorSensor object.
+    ColorSensor colorSensor;    // Hardware Device Object
     colorSensor = hardwareMap.get(ColorSensor.class, "colorSensor");
-
-    // Set the LED in the beginning
-    colorSensor.enableLed(bLedOn);
 
     // wait for the start button to be pressed.
     waitForStart();
 
-    // while the op mode is active, loop and read the RGB data.
-    // Note we use opModeIsActive() as our loop condition because it is an interruptible method.
-    while (opModeIsActive()) {
+    // Turn the LED on.
+    colorSensor.enableLed(true);
 
-      // check the status of the x button on either gamepad.
-      bCurrState = gamepad1.x;
-
-      // check for button state transitions.
-      if (bCurrState && (bCurrState != bPrevState))  {
-
-        // button is transitioning to a pressed state. So Toggle LED
-        bLedOn = !bLedOn;
-        colorSensor.enableLed(bLedOn);
-      }
-
-      // update previous state variable.
-      bPrevState = bCurrState;
-
-      // convert the RGB values to HSV values.
-      Color.RGBToHSV(colorSensor.red() * 8, colorSensor.green() * 8, colorSensor.blue() * 8, hsvValues);
-
-      // send the info back to driver station using telemetry function.
-      telemetry.addData("LED", bLedOn ? "On" : "Off");
-      telemetry.addData("Clear", colorSensor.alpha());
-      telemetry.addData("Red  ", colorSensor.red());
-      telemetry.addData("Green", colorSensor.green());
-      telemetry.addData("Blue ", colorSensor.blue());
-      telemetry.addData("Hue", hsvValues[0]);
-
-      // change the background color to match the color detected by the RGB sensor.
-      // pass a reference to the hue, saturation, and value array as an argument
-      // to the HSVToColor method.
-      relativeLayout.post(new Runnable() {
-        public void run() {
-          relativeLayout.setBackgroundColor(Color.HSVToColor(0xff, values));
-        }
-      });
-
-      telemetry.update();
-    }
-
-    // Set the panel back to the default color
-    relativeLayout.post(new Runnable() {
-      public void run() {
-        relativeLayout.setBackgroundColor(Color.WHITE);
-      }
-    });
+    // Read the RGB data, and report colors to driver station.
+    telemetry.addData("Red  ", colorSensor.red());
+    telemetry.addData("Green", colorSensor.green());
+    telemetry.addData("Blue ", colorSensor.blue());
+    telemetry.update();
+    sleep (3000);
   }
 }
