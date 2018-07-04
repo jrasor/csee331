@@ -53,7 +53,7 @@ and the complex ones are only partially built on the simpler ones.
 What are the students supposed to do with it, then?
 1. First, run it on a Trainerbot and score with it at an early season Meet.
 2. Then remedy its deficiencies with well chosen classes that use abstraction,
-inheritance, overloading, etc. This means learing object-oriented programming
+inheritance, overloading, etc. This means learning object-oriented programming
 in a fun and competitive setting.
 3. They should be able to write new classes and use them on new hardware 
 modules swapped in for service in late-season Meets.
