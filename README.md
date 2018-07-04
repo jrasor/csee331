@@ -1,31 +1,27 @@
-##Welcome!
+## Welcome!
 
 This GitHub repository contains the source code that is used to build 
 training code for Don Bosco Tech course CSEE331 "Robotics Engineering". 
-It is based on the FTC Software Development Kit (SDK), available at 
-
-        https://github.com/ftctechnh/ftc_app/releases
+It is based on the FTC Software Development Kit (SDK), available at the
+[FTC SDK repository](https://github.com/ftctechnh/ftc_app/releases).
         
 Open it in Android Studio.
 
-###Get This Project
-To get our code, download or clone 
-
-        https://github.com/jrasor/csee331
+### Get This Project
+To get our code, download or clone from 
+[our repository](https://github.com/jrasor/csee331).
 
 This also was developed in Android Studio.
 
 If you are new to the FIRST Tech Challenge software and control system, 
-look at 
-
-      https://github.com/ftctechnh/ftc_app/wiki
+look at the [FTC SDK Wiki](https://github.com/ftctechnh/ftc_app/wiki).
 
 Check back there from time to time, as it contains the most current 
 information about the FIRST Tech Challenge software and control system.
-###About This Project
+### About This Project
 The CSEE331 course is designed to bring senior high school students to the
 skill level needed to enter FTC competition as rookie participants. 
-####The Robot
+#### The Robot
 They begin by running a simple robot called a "Trainerbot". Then they disassemble
 the major subsystems and put it back together again. Then they disassemble
 the whole thing down to nuts and screws, and assemble it, all the while 
@@ -44,7 +40,7 @@ a number of drive trains to a Meet and choose one to fit their Allies'
 strengths. They can bring a spare electronics pan and swap it in in less than
 a minute. The possibilities for actuator and sensor suites are virtually
 endless.
-####The Software
+#### The Software
 The software is this project. It is built up from sample opmodes taken from
 the FtcRobotController samples that come with the SDK, and also with this
 project. It is _not_ particularly well suited to this type of modular robot.
@@ -54,7 +50,7 @@ For starters, this software is not very modular.
 * Some of the robot class members are at different levels of complexity,
 and the complex ones are only partially built on the simpler ones.
 
-What are the studens supposed to do with it, then?
+What are the students supposed to do with it, then?
 1. First, run it on a Trainerbot and score with it at an early season Meet.
 2. Then remedy its deficiencies with well chosen classes that use abstraction,
 inheritance, overloading, etc. This means learing object-oriented programming
