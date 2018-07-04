@@ -30,21 +30,22 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 
 /**
- * This TeleOp OpMode operates the Trainerbot paddle with the game pad: button Y to deploy it, and
- * button A to stow it. The OpMode is structured as a LinearOpMode.
+ * This Autonomous OpMode tests the Trainerbot paddle: stow it, deploy it,
+ * stow it. The OpMode is structured as a LinearOpMode.
 
- * This code assumes a Servo configured with the name "paddle", as is found on a Trainerbot.
+ * This code assumes a Servo configured with the name "paddle", as is found
+ * on a Trainerbot.
  *
- * This code was copied from sample ConceptScanServo, and heavily modified.
+ * This code was copied from sample ConceptScanServo, and heavily simplified.
  */
-@TeleOp(name = "Operate Paddle", group = "Trainerbot")
+@Autonomous(name = "Test Paddle", group = "Trainerbot")
 //@Disabled
-public class OperatePaddle extends LinearOpMode {
+public class TestPaddle extends LinearOpMode {
 
     static final double DEPLOYED    =  0.0;     // Maximum rotational position
     static final double STOWED      =  1.0;     // Minimum rotational position
@@ -59,15 +60,11 @@ public class OperatePaddle extends LinearOpMode {
 
         waitForStart();
 
-        while (opModeIsActive()) {
-            if (gamepad1.y) {
-                servo.setPosition(DEPLOYED);
-            };
-            if (gamepad1.a) {
-                servo.setPosition(STOWED);
-            };
-        }
+        servo.setPosition(DEPLOYED);
+        sleep(2000);
 
+        servo.setPosition(STOWED);
+        sleep(1000);
 
         telemetry.addData(">", "Done");
         telemetry.update();
