@@ -35,7 +35,7 @@ transverse members of the drive train, and can easily be moved around on
 them.
 
 All these subsystems are modular. A team can swap them in and out in their
-pit, making multiple configurations possible. For example, then can bring 
+pit, making multiple configurations possible. For example, they can bring 
 a number of drive trains to a Meet and choose one to fit their Allies' 
 strengths. They can bring a spare electronics pan and swap it in in less than
 a minute. The possibilities for actuator and sensor suites are virtually
