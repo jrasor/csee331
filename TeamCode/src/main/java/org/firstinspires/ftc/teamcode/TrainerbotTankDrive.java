@@ -53,7 +53,7 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
 public class TrainerbotTankDrive extends OpMode{
 
     /* Declare OpMode members. */
-    Trainerbot robot       = new Trainerbot();  // Class created to define a Trainerbot's hardware
+    private Trainerbot robot       = new Trainerbot();  // Class created to define a Trainerbot's hardware
 
     /*
      * Code to run ONCE when the driver hits INIT
