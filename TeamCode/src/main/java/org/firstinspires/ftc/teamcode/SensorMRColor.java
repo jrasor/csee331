@@ -55,9 +55,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
  *
  * Physical setup:
  *   Put the Trainerbot on a Relic Recovery Field. It's probably best to stay
- * off the Balancing Stone for now; let's keep it simple to begin with. You
- * might be able to do this on a table; the Trainerbot is not supposed to
- * drive anywhere.
+ * off the Balancing Stone for now; let's keep it simple to begin with.
  *   Put a Platform (black piece of wood with two depressions and a white
  * stripe in the middle) in front of the Trainerbot. Put a Red and a Blue
  * Jewel in the Platform depressions.
@@ -70,8 +68,8 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
  * to put it closer to the left Jewel, inside 2cm. Beyond that, it's almost
  * blind.
  *
- * It is assumed that the color sensor is configured with a name of
- * "colorSensor". That's done in Trainerbot.xml, of which there is a copy in
+ *   It is assumed that the color sensor is configured with a name of
+ * "colorSensor". That's done in TrainerbotN.xml, of which there are copies in
  * the hardware folder in the root of this project. But the one that counts is
  * the one that rides on the Robot Controller phone.
  *
