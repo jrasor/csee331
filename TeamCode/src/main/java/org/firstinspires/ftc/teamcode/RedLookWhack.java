@@ -49,10 +49,10 @@ public class RedLookWhack extends LinearOpMode {
 
     Trainerbot              robot   = new Trainerbot();
 
-    static final double TURN_SPEED  = 0.2;      // slow to minimize wheel slippage
+    static final double TURN_SPEED  = 0.20;     // slow to minimize wheel slippage
     static final double KNOCK_ANGLE = 0.25;     // radians
-    static final double DEPLOYED    = 0.0;     // Maximum rotational position
-    static final double STOWED      = 1.0;     // Minimum rotational position
+    static final double DEPLOYED    = 0.04;     // Extended from front of robot
+    static final double STOWED      = 1.00;     // Folded back toward rear
     private boolean redIsLeft;
 
     @Override
