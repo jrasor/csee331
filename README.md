@@ -39,8 +39,9 @@ a minute. The possibilities for actuator and sensor suites are virtually
 endless.
 #### Another Robot
 Another training robot is supported by this project, the "Lookeebot". It
-is a drive train and a camera, nothing else. It's a testing platform for
-robot vision. It just runs around with the camera and looks at stuff.
+is a drive train and a controller phone, nothing else. It's a testing 
+platform for robot vision. It just runs around with the phone's camera and 
+looks at stuff.
 #### The Software
 The software is this project. It is built up from sample opmodes taken from
 the FtcRobotController samples that come with the SDK, and also with this
