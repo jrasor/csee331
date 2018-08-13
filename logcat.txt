@@ -1,0 +1,273 @@
+07-31 10:27:32.979 13647-13647/? I/art: Late-enabling -Xcheck:jni
+07-31 10:27:33.083 13647-13647/com.qualcomm.ftcrobotcontroller V/AppUtil: initializing: getExternalStorageDirectory()=/storage/emulated/0
+07-31 10:27:33.091 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: attempting to start service MediaTransferProtocolMonitorService
+07-31 10:27:33.093 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: started service MediaTransferProtocolMonitorService
+07-31 10:27:33.094 13647-13664/com.qualcomm.ftcrobotcontroller V/RobotCore: saving logcat to /storage/emulated/0/robotControllerLog.txt
+    logging command line: logcat -f /storage/emulated/0/robotControllerLog.txt -r4096 -n4 -v threadtime UsbRequestJNI:S UsbRequest:S *:V
+07-31 10:27:33.094 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: attempting to start service OnBotJavaService
+07-31 10:27:33.096 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: started service OnBotJavaService
+07-31 10:27:33.109 13647-13647/com.qualcomm.ftcrobotcontroller V/AppUtil: rootActivity=FtcRobotControllerActivity
+07-31 10:27:33.109 13647-13647/com.qualcomm.ftcrobotcontroller V/RCActivity: onCreate()
+07-31 10:27:33.123 13647-13647/com.qualcomm.ftcrobotcontroller V/ThreadPool: container(0x09172c5f: CallbackLooper) added id=1010 TID=0 count=1
+07-31 10:27:33.124 13647-13668/com.qualcomm.ftcrobotcontroller V/CallbackLooper: thread=1010
+07-31 10:27:33.129 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent: doStart()...
+07-31 10:27:33.133 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: wifiP2pEnabled=true
+07-31 10:27:33.136 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent: ...doStart()
+07-31 10:27:33.137 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_name: doStart()...
+    ...doStart()
+07-31 10:27:33.137 13647-13668/com.qualcomm.ftcrobotcontroller D/NetDiscover_wifiDirectAgent_bcast: connection changed: networkInfo.state=CONNECTED
+07-31 10:27:33.137 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: NetworkInfo: [type: WIFI_P2P[], state: CONNECTED/CONNECTED, reason: (unspecified), extra: (none), roaming: false, failover: false, isAvailable: true]
+07-31 10:27:33.137 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: ----- all preferences -----
+07-31 10:27:33.137 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: WifiP2pInfo: groupFormed: true isGroupOwner: true operatingChannel: 2427 groupOwnerAddress: /192.168.49.1 mccMode: false
+07-31 10:27:33.138 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: name='pref_wifip2p_groupowner_connectedto' value=
+    name='App Restrictions' value=AAAAAA==
+        
+    name='pref_has_independent_phone_battery' value=true
+    name='pref_app_theme' value=red
+07-31 10:27:33.138 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: WifiP2pGroup: network: DIRECT-Qp-5197-D-RC, isGO: true, Operating Channel: 2427, GO: Device: , deviceAddress: f0:d7:aa:82:c9:5a, primary type: null, secondary type: null, wps: 0, grpcapab: 0, devcapab: 0, status: 4, wfdInfo: WFD enabled: falseWFD DeviceInfo: 0, WFD CtrlPort: 0, WFD MaxThroughput: 0, level: 0, interface: p2p0, networkId: 0, mGoOperFreq: 2427
+07-31 10:27:33.138 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: name='pref_wifip2p_remote_channel_change_works' value=true
+    name='pref_hardware_config_filename' value={"isDirty":false,"location":"LOCAL_STORAGE","name":"nullbot","resourceId":0}
+    name='pref_device_name' value=5197-D-RC
+    name='pref_device_name_old' value=5197-D-RC
+    name='pref_network_connection_type' value=WIFIDIRECT
+    name='pref_device_name_tracking' value=WIFIDIRECT
+    name='pref_sound_on_off' value=true
+    name='pref_rc_connected' value=true
+07-31 10:27:33.138 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: this device changed: Device=5197-D-RC deviceAddress=f0:d7:aa:82:c9:5a primary type=10-0050F204-5 secondary type=null wps=0 grpcapab=0 devcapab=0 status=0 wfdInfo=WFD enabled=falseWFD DeviceInfo=0 WFD CtrlPort=0 WFD MaxThroughput=0 level=0
+07-31 10:27:33.138 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_name: remembering wifiDirectName: 5197-D-RC...
+07-31 10:27:33.138 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: doStart()...
+07-31 10:27:33.138 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_name: wifiDirectName=5197-D-RC
+07-31 10:27:33.138 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: ...doStart()
+07-31 10:27:33.140 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_name: ...remembering wifiDirectName
+07-31 10:27:33.140 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: p2p discoverPeers()=false
+    wifi direct remembered groups cleared
+07-31 10:27:33.142 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent_bcast: wifiState=ENABLED
+07-31 10:27:33.143 13647-13668/com.qualcomm.ftcrobotcontroller V/NetDiscover_wifiDirectAgent: found persistent group: DIRECT-Qp-5197-D-RC
+07-31 10:27:33.180 13647-13647/com.qualcomm.ftcrobotcontroller D/CameraBridge: Attr count: 6
+07-31 10:27:33.186 13647-13647/com.qualcomm.ftcrobotcontroller I/WebViewFactory: Loading com.google.android.webview version 50.0.2661.86 (code 266108600)
+07-31 10:27:33.222 13647-13647/com.qualcomm.ftcrobotcontroller W/System: ClassLoader referenced unknown path: /system/app/WebViewGoogle/lib/arm
+07-31 10:27:33.232 13647-13647/com.qualcomm.ftcrobotcontroller I/cr_LibraryLoader: Time to load native libraries: 4 ms (timestamps 8738-8742)
+    Expected native library version number "50.0.2661.86", actual native library version number "50.0.2661.86"
+07-31 10:27:33.249 13647-13647/com.qualcomm.ftcrobotcontroller V/WebViewChromiumFactoryProvider: Binding Chromium to main looper Looper (main, tid 1) {523ed6b}
+07-31 10:27:33.249 13647-13647/com.qualcomm.ftcrobotcontroller I/cr_LibraryLoader: Expected native library version number "50.0.2661.86", actual native library version number "50.0.2661.86"
+07-31 10:27:33.249 13647-13647/com.qualcomm.ftcrobotcontroller I/chromium: [INFO:library_loader_hooks.cc(143)] Chromium logging enabled: level = 0, default verbosity = 0
+07-31 10:27:33.268 13647-13647/com.qualcomm.ftcrobotcontroller I/cr_BrowserStartup: Initializing chromium process, singleProcess=true
+07-31 10:27:33.278 13647-13647/com.qualcomm.ftcrobotcontroller E/ApkAssets: Error while loading asset assets/natives_blob_64.bin: java.io.FileNotFoundException: assets/natives_blob_64.bin
+    Error while loading asset assets/snapshot_blob_64.bin: java.io.FileNotFoundException: assets/snapshot_blob_64.bin
+07-31 10:27:33.293 13647-13647/com.qualcomm.ftcrobotcontroller I/Adreno-EGL: <qeglDrvAPI_eglInitialize:379>: EGL 1.4 QUALCOMM build:  (Ifd751822f5)
+    OpenGL ES Shader Compiler Version: XE031.06.00.05
+    Build Date: 01/26/16 Tue
+    Local Branch: AU12_SBA
+    Remote Branch: 
+    Local Patches: 
+    Reconstruct Branch: 
+07-31 10:27:33.391 13647-13647/com.qualcomm.ftcrobotcontroller D/cr_Ime: [InputMethodManagerWrapper.java:30] Constructor
+07-31 10:27:33.402 13647-13647/com.qualcomm.ftcrobotcontroller W/cr_AwContents: onDetachedFromWindow called when already detached. Ignoring
+07-31 10:27:33.404 13647-13647/com.qualcomm.ftcrobotcontroller D/cr_Ime: [InputMethodManagerWrapper.java:59] isActive: false
+07-31 10:27:33.415 13647-13647/com.qualcomm.ftcrobotcontroller V/OnBotJava: OnBotJavaManager::static
+07-31 10:27:33.476 13647-13647/com.qualcomm.ftcrobotcontroller V/OnBotJava: getCurrentOutputJarDir() unavailable
+    getCurrentOutputJarDir() unavailable
+07-31 10:27:35.104 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Network: inactive, disconnected
+07-31 10:27:35.105 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: attempting to start service FtcRobotControllerWatchdogService
+07-31 10:27:35.108 13647-13647/com.qualcomm.ftcrobotcontroller V/ServiceStarter: started service FtcRobotControllerWatchdogService
+07-31 10:27:35.113 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: BuildConfig: versionCode=27 versionName=3.7 module=com.qualcomm.ftcrobotcontroller
+    BuildConfig: versionCode=43 versionName=5.21 module=com.qualcomm.robotcore
+    BuildConfig: versionCode=43 versionName=5.21 module=com.qualcomm.hardware
+07-31 10:27:35.114 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: BuildConfig: versionCode=43 versionName=5.21 module=com.qualcomm.ftccommon
+    BuildConfig: versionCode=43 versionName=5.21 module=com.google.blocks
+    BuildConfig: versionCode=43 versionName=5.21 module=org.firstinspires.inspection
+07-31 10:27:35.115 13647-13647/com.qualcomm.ftcrobotcontroller V/RCActivity: onStart()
+07-31 10:27:35.116 13647-13647/com.qualcomm.ftcrobotcontroller D/OpenCV/StaticHelper: Trying to get library list
+07-31 10:27:35.121 13647-13647/com.qualcomm.ftcrobotcontroller E/OpenCV/StaticHelper: OpenCV error: Cannot load info library for OpenCV
+07-31 10:27:35.121 13647-13647/com.qualcomm.ftcrobotcontroller D/OpenCV/StaticHelper: Library list: ""
+    First attempt to load libs
+    Trying to init OpenCV libs
+    Trying to load library opencv_java3
+07-31 10:27:35.137 13647-13647/com.qualcomm.ftcrobotcontroller D/OpenCV/StaticHelper: Library opencv_java3 loaded
+    First attempt to load libs is OK
+07-31 10:27:35.138 13647-13647/com.qualcomm.ftcrobotcontroller I/OpenCV/StaticHelper: General configuration for OpenCV 3.4.2 =====================================
+      Version control:               3.4.2
+      Platform:
+        Timestamp:                   2018-07-04T12:51:51Z
+        Host:                        Linux 4.13.0-45-generic x86_64
+        Target:                      Linux 1 armv7-a
+        CMake:                       2.8.12.2
+        CMake generator:             Ninja
+        CMake build tool:            /usr/bin/ninja
+        Configuration:               Release
+      CPU/HW features:
+        Baseline:                    NEON
+          requested:                 DETECT
+          required:                  NEON
+          disabled:                  VFPV3
+      C/C++:
+        Built as dynamic libs?:      NO
+        C++ Compiler:                /usr/bin/ccache /opt/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ (ver 4.8)
+        C++ flags (Release):         -fexceptions -frtti -fpic -Wno-psabi --sysroot=/opt/android/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack  -DANDROID -D__ANDROID_API__=9   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfpu=neon -mfp16-format=ieee -fvisibility=hidden -fvisibility-inlines-hidden -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+        C++ flags (Debug):           -fexceptions -frtti -fpic -Wno-psabi --sysroot=/opt/android/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack  -DANDROID -D__ANDROID_API__=9   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfpu=neon -mfp16-format=ieee -fvisibility=hidden -fvisibility-inlines-hidden -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -DDEBUG -D_DEBUG
+        C Compiler:                  /usr/bin/ccache /opt/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+        C flags (Release):           -fexceptions -fpic -Wno-psabi --sysroot=/opt/android/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack  -DANDROID -D__ANDROID_API__=9   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfpu=neon -mfp16-format=ieee -fvisibility=hidden -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -DNDEBUG
+        C flags (Debug):             -fexceptions -fpic -Wno-psabi --sysroot=/opt/android/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=neon -fdata-sections -ffunction-sections -Wa,--noexecstack  -DANDROID -D__ANDROID_API__=9   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfpu=neon -mfp16-format=ieee -fvisibility=hidden -marm -fno-omit-frame-pointer -fno-strict-aliasing -O0 -g -DDEBUG -D_DEBUG  -DDEBUG -D_DEBUG
+        Linker flags (Release):      -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now    
+        Linker flags (Debug):        -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now    
+        ccache:                      YES
+        Precompiled headers:         NO
+        Extra dependencies:          z dl m log
+        3rdparty dependencies:       libjpeg-turbo libwebp libpng libtiff libjasper IlmImf libprotobuf tbb libcpufeatures tegra_hal
+      OpenCV modules:
+        To be built:                 calib3d core dnn features2d flann highgui imgcodecs imgproc java java_bindings_generator ml objdetect photo python_bindings_generator shape stitching superres video videoio videostab
+        Disabled:                    js world
+        Disabled by dependency:      -
+        Unavailable:                 cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev python2 python3 ts viz
+        Applications:                android_examples
+        Documentation:               NO
+        Non-free algorithms:         NO
+07-31 10:27:35.139 13647-13647/com.qualcomm.ftcrobotcontroller I/OpenCV/StaticHelper:   Android NDK:                   location: /opt/android/android-ndk-r10e
+        Android ABI:                 armeabi-v7a with NEON
+        NDK toolchain:               arm-linux-androideabi-4.8
+        STL type:                    gnustl_static
+        Native API level:            9
+      Android SDK:                   /opt/android/android-sdk-java7 (tools: 25.2.2 build tools: 23.0.3)
+        android tool:                /opt/android/android-sdk-java7/tools/android
+        SDK target:                  android-14
+        Projects build scripts:      Ant/Eclipse compatible
+      GUI: 
+      Media I/O: 
+        ZLib:                        z (ver 1.2.3)
+        JPEG:                        build-libjpeg-turbo (ver 1.5.3-62)
+        WEBP:                        build (ver encoder: 0x020e)
+        PNG:                         build (ver 1.6.34)
+        TIFF:                        build (ver 42 - 4.0.9)
+        JPEG 2000:                   build (ver 1.900.1)
+        OpenEXR:                     build (ver 1.7.1)
+        HDR:                         YES
+        SUNRASTER:                   YES
+        PXM:                         YES
+      Video I/O:
+      Parallel framework:            TBB (ver 2018.0 interface 10001)
+      Trace:                         YES (built-in)
+      Other third-party libraries:
+        Custom HAL:                  YES (carotene (ver 0.0.1))
+        Protobuf:                    build (3.5.1)
+      Python (for build):            /usr/bin/python2.7
+      Java:                          export all functions
+        ant:                         /usr/bin/ant (ver 1.9.3)
+        Java wrappers:               YES
+        Java tests:                  NO
+      Install to:                    /build/3_4_pack-android/build/o4a/install
+    -----------------------------------------------------------------
+07-31 10:27:35.139 13647-13647/com.qualcomm.ftcrobotcontroller D/RCActivity: OpenCV library found inside package. Using it!
+07-31 10:27:35.139 13647-13647/com.qualcomm.ftcrobotcontroller I/RCActivity: OpenCV Manager Connected
+07-31 10:27:35.139 13647-13647/com.qualcomm.ftcrobotcontroller D/CameraBridge: call checkCurrentState
+07-31 10:27:35.139 13647-13647/com.qualcomm.ftcrobotcontroller V/RCActivity: onResume()
+07-31 10:27:35.148 13647-13695/com.qualcomm.ftcrobotcontroller D/OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+07-31 10:27:35.181 13647-13647/com.qualcomm.ftcrobotcontroller V/MTPMonitorService: onCreate()
+07-31 10:27:35.182 13647-13647/com.qualcomm.ftcrobotcontroller V/MTPMonitorService: onStartCommand() intent=Intent { cmp=com.qualcomm.ftcrobotcontroller/org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService } flags=0x0 startId=1
+07-31 10:27:35.182 13647-13647/com.qualcomm.ftcrobotcontroller V/ThreadPool: container(0x0c7801e4: MTPMonitor) added id=1032 TID=0 count=1
+07-31 10:27:35.182 13647-13647/com.qualcomm.ftcrobotcontroller V/MTPMonitor: observing: /storage/emulated/0
+07-31 10:27:35.185 13647-13647/com.qualcomm.ftcrobotcontroller W/FileObserverManager: upgrading mask: path=/storage/emulated/0/FIRST/blocks old=0x00000ffc new=0x00004ffc: might possibly miss event
+07-31 10:27:35.188 13647-13647/com.qualcomm.ftcrobotcontroller W/FileObserverManager: upgrading mask: path=/storage/emulated/0/FIRST/java/status old=0x00000ffc new=0x00004ffc: might possibly miss event
+07-31 10:27:35.207 13647-13647/com.qualcomm.ftcrobotcontroller V/OnBotJavaService: onCreate()
+    onStartCommand() intent=Intent { cmp=com.qualcomm.ftcrobotcontroller/org.firstinspires.ftc.robotcore.internal.opmode.OnBotJavaService } flags=0x0 startId=1
+07-31 10:27:35.207 13647-13647/com.qualcomm.ftcrobotcontroller V/OnBotJava: ctor()...
+07-31 10:27:35.208 13647-13647/com.qualcomm.ftcrobotcontroller V/OnBotJava: ...ctor()
+07-31 10:27:35.209 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: onSharedPreferenceChanged(name=App Restrictions, value=AAAAAA==
+    )
+07-31 10:27:35.217 13647-13647/com.qualcomm.ftcrobotcontroller V/FtcRobotControllerWatchdogService: onCreate()
+    onStartCommand() intent=Intent { cmp=com.qualcomm.ftcrobotcontroller/org.firstinspires.ftc.ftccommon.internal.FtcRobotControllerWatchdogService } flags=0x0 startId=1
+    shouldAutoLauchRobotController() result=false
+07-31 10:27:35.218 13647-13647/com.qualcomm.ftcrobotcontroller V/WebServer: creating NanoHTTPD(8080)
+07-31 10:27:35.227 13647-13647/com.qualcomm.ftcrobotcontroller V/FTCService: onCreate()
+    onBind()
+    Android Device: maker=motorola model=XT1609 sdk=23
+07-31 10:27:35.230 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Getting network assistant of type: WIFIDIRECT
+07-31 10:27:35.233 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: onSharedPreferenceChanged(name=pref_wifip2p_groupowner_connectedto, value=null)
+07-31 10:27:35.233 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirect: There are 1 Wifi Direct Assistant Clients (+)
+    Enabling Wifi Direct Assistant
+07-31 10:27:35.234 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirectInviteMonitor: startMonitoring()
+07-31 10:27:35.275 13647-13695/com.qualcomm.ftcrobotcontroller I/OpenGLRenderer: Initialized EGL, version 1.4
+07-31 10:27:35.293 13647-13647/com.qualcomm.ftcrobotcontroller D/CameraBridge: call surfaceChanged event
+    call checkCurrentState
+    call processExitState: 0
+    call processEnterState: 1
+    call onEnterStartedState
+07-31 10:27:35.293 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Connecting to camera
+    Initialize java camera
+    Trying to open camera with old open()
+07-31 10:27:35.484 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: getSupportedPreviewSizes()
+07-31 10:27:35.487 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Set preview size to 176x144
+07-31 10:27:35.497 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: startPreview
+07-31 10:27:35.630 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Starting processing thread
+07-31 10:27:35.634 13647-13647/com.qualcomm.ftcrobotcontroller D/WifiDirect: broadcast: state - enabled: true
+    broadcast: connection changed: connectStatus=NOT_CONNECTED networkInfo.state=CONNECTED
+07-31 10:27:35.634 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirect: writing pref name=pref_wifip2p_groupowner_connectedto value=
+07-31 10:27:35.634 13647-13647/com.qualcomm.ftcrobotcontroller V/NetDiscover_prefremrc: onSharedPreferenceChanged(name=pref_wifip2p_groupowner_connectedto, value=)
+07-31 10:27:35.635 13647-13647/com.qualcomm.ftcrobotcontroller D/WifiDirect: broadcast: this device changed
+07-31 10:27:35.635 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirect: device information: 5197-D-RC f0:d7:aa:82:c9:5a
+07-31 10:27:35.635 13647-13647/com.qualcomm.ftcrobotcontroller D/WifiDirect: cannot create group, does group already exist?
+07-31 10:27:35.635 13647-13647/com.qualcomm.ftcrobotcontroller V/FTCService: RCActivity.controllerService=bound
+07-31 10:27:35.635 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Network: unknown, disconnected
+07-31 10:27:35.636 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Robot Status: stopped
+07-31 10:27:35.642 13647-13647/com.qualcomm.ftcrobotcontroller V/ThreadPool: container(0x0260dbc5: default threadpool) added id=1036 TID=0 count=1
+07-31 10:27:35.643 13647-13762/com.qualcomm.ftcrobotcontroller V/RobotCore: thread: 'RobotSetupRunnable.run()' starting...
+07-31 10:27:35.644 13647-13762/com.qualcomm.ftcrobotcontroller V/FTCService: Processing robot setup
+07-31 10:27:35.644 13647-13762/com.qualcomm.ftcrobotcontroller V/RobotCore: Robot Status: stopped, scanning for USB devices
+07-31 10:27:35.712 13647-13647/com.qualcomm.ftcrobotcontroller D/WifiDirect: group owners address: /192.168.49.1
+    group formed, this device is the group owner (GO)
+07-31 10:27:35.712 13647-13647/com.qualcomm.ftcrobotcontroller I/FTCService: Wifi Direct - connected as group owner
+07-31 10:27:35.718 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Network: enabled, disconnected
+07-31 10:27:35.755 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.757 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirect: connection information available
+    connection information - groupOwnerName = 5197-D-RC
+    connection information - groupOwnerMacAddress = f0:d7:aa:82:c9:5a
+    connection information - groupInterface = p2p0
+    connection information - groupNetworkName = DIRECT-Qp-5197-D-RC
+07-31 10:27:35.757 13647-13647/com.qualcomm.ftcrobotcontroller I/FTCService: Network Connection Passphrase: edjcFCX5
+07-31 10:27:35.758 13647-13647/com.qualcomm.ftcrobotcontroller V/WebServer: starting port=8080
+07-31 10:27:35.769 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Getting network assistant of type: WIFIDIRECT
+07-31 10:27:35.769 13647-13647/com.qualcomm.ftcrobotcontroller V/WifiDirect: There are 2 Wifi Direct Assistant Clients (+)
+07-31 10:27:35.770 13647-13647/com.qualcomm.ftcrobotcontroller V/WebServer: started port=8080
+07-31 10:27:35.770 13647-13647/com.qualcomm.ftcrobotcontroller V/RobotCore: Network: active, disconnected
+07-31 10:27:35.774 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.805 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.838 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.873 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.905 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:35.938 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.004 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.038 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.071 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.105 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.148 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.188 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.255 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.322 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.389 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.456 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.522 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.589 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.658 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.724 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.791 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.858 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.924 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:36.991 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.058 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.125 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.192 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.260 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.325 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.394 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.457 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.526 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.593 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.658 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.725 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.792 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.858 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.925 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:37.990 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:38.059 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:38.125 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:38.193 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016
+07-31 10:27:38.261 13647-13647/com.qualcomm.ftcrobotcontroller D/JavaCameraView: Preview Frame received. Frame size: 38016

@@ -5,25 +5,22 @@ training code for Don Bosco Tech course CSEE331 "Robotics Engineering".
 It is based on the FTC Software Development Kit (SDK), available at the
 [FTC SDK repository](https://github.com/ftctechnh/ftc_app/releases).
         
-Open it in Android Studio.
+Open it in Android Studio. That's how it was developed.
 
 ### Get This Project
 To get our code, download or clone from 
 [our repository](https://github.com/jrasor/csee331).
 
-This also was developed in Android Studio.
-
 If you are new to the FIRST Tech Challenge software and control system, 
 look at the [FTC SDK Wiki](https://github.com/ftctechnh/ftc_app/wiki).
-
-Check back there from time to time, as it contains the most current 
+Check back there from time to time, as it contains the most current
 information about the FIRST Tech Challenge software and control system.
 ### About This Project
-The CSEE331 course is designed to bring senior high school students to the
+The CSEE331 course is designed to bring high school students to the
 skill level needed to enter FTC competition as rookie participants. 
 #### The Robot
 They begin by running a simple robot called a "Trainerbot". Then they disassemble
-the major subsystems and put it back together again. Then they disassemble
+its major subsystems and put it back together again. Then they disassemble
 the whole thing down to nuts and screws, and assemble it, all the while 
 writing documentation on how to do that.
 
@@ -40,6 +37,11 @@ a number of drive trains to a Meet and choose one to fit their Allies'
 strengths. They can bring a spare electronics pan and swap it in in less than
 a minute. The possibilities for actuator and sensor suites are virtually
 endless.
+#### Another Robot
+Another training robot is supported by this project, the "Lookeebot". It
+is a drive train and a controller phone, nothing else. It's a testing 
+platform for robot vision. It just runs around with the phone's camera and 
+looks at stuff.
 #### The Software
 The software is this project. It is built up from sample opmodes taken from
 the FtcRobotController samples that come with the SDK, and also with this

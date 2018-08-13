@@ -47,7 +47,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * working. If so, go to one of the other opmodes, study and improve it.
  *
  * It is copied from sample FtcRobotController external sample
- * BasicOpMode_linear.
+ * BasicOpMode_Linear.
  */
 
 @TeleOp(name="Tiny Linear OpMode", group="Linear Opmode")

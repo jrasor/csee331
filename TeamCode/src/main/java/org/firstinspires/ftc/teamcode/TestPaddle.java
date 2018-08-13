@@ -47,6 +47,8 @@ import com.qualcomm.robotcore.hardware.Servo;
 //@Disabled
 public class TestPaddle extends LinearOpMode {
 
+    // Note: these constants different from those in RedLookWhack. Can they
+    // be available for all opmodes?
     static final double DEPLOYED    =  0.0;     // Maximum rotational position
     static final double STOWED      =  1.0;     // Minimum rotational position
 
