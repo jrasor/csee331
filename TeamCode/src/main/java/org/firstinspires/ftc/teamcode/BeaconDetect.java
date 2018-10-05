@@ -29,10 +29,7 @@ public class BeaconDetect extends LinearOpMode {
     // Process it for beacon color order left and right
     ImageProcessorResult imageProcessorResult = frameGrabber.getResult();
     BeaconColorResult result = (BeaconColorResult) imageProcessorResult.getResult();
-
-    BeaconColorResult.BeaconColor leftColor = result.getLeftColor();
-    BeaconColorResult.BeaconColor rightColor = result.getRightColor();
-
+    
     telemetry.addData("Result", result); // Report the color order string.
     telemetry.update();
     //wait before quitting, so Driver can read that telemetry report.
