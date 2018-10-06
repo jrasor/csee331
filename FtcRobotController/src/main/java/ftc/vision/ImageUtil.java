@@ -100,20 +100,23 @@ public class ImageUtil {
   }
 
   /**
-   * Applys the Core.inRange function to a Mat after accounting for rollover
-   * on the hsv hue channel.
+   * Applies the Core.inRange function to a Mat after accounting for wrap around
+   * on the hsv hue channel near red (H = 0).
    * @param srcHSV source Mat in HSV format
    * @param min Scalar that defines the min h, s, and v values
    * @param max Scalar that defines the max h, s, and v values
    * @param dst the output binary image
    */
   public static void hsvInRange(Mat srcHSV, Scalar min, Scalar max, Mat dst){
-    //if the max hue is greater than the min hue
+    // If the max hue is greater than the min hue, normal processing.
     if(max.val[0] > min.val[0]) {
-      //use inRange once
+      // simply use inRange once
+      //Core.inRange(srcHSV, min, max, dst);
       Core.inRange(srcHSV, min, max, dst);
+      // Else we have a split red hue range, one min - 179 wrapping to one lower
+      // 0 - max. This else clause is never invoked for Ruckus yellow and white.
     } else {
-      //otherwise, compute 2 ranges and bitwise or them
+      // otherwise, compute the 2 ranges and bitwise or them together.
       double[] vals = min.val.clone();
       vals[0] = 0;
       Scalar min2 = new Scalar(vals);

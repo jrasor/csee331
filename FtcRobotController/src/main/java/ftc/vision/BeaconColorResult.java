@@ -4,17 +4,18 @@ package ftc.vision;
 import org.opencv.core.Scalar;
 
 /**
- * Storage class for the position and color of the beacon
- * This file was made by the electronVolts, FTC team 7393
- * Date Created: 8/17/16.
+ * Storage class for the position and color of the Minerals.
+ *
+ * v 0.1 by the electronVolts, FTC team 7393, 8/17/16.
+ * v 0.2 by jmr FTC 5197, 10/6/18.
  */
 public class BeaconColorResult{
   
   public enum BeaconColor{
-    RED     (ImageUtil.RED),
-    GREEN   (ImageUtil.GREEN),
-    BLUE    (ImageUtil.BLUE),
-    UNKNOWN (ImageUtil.BLACK);
+    YELLOW    (ImageUtil.YELLOW),
+    GREEN     (ImageUtil.GREEN),
+    WHITE     (ImageUtil.WHITE),
+    UNKNOWN   (ImageUtil.BLACK);
     
     public final Scalar color;
     
