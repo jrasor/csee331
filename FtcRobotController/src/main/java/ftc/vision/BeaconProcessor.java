@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
     private static final String TAG = "BeaconProcessor";
-    private static final double MIN_MASS = 6;
+    private static final double MIN_MASS = 6; // Minimum size of target colored objects
 
     @Override
     public ImageProcessorResult<BeaconColorResult> process(long startTime, Mat rgbaFrame, boolean saveImages) {
@@ -31,19 +31,17 @@ public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
         Imgproc.cvtColor(rgbaFrame, hsv, Imgproc.COLOR_RGB2HSV);
         // rgbaFrame is untouched; hsv now contains the same image but using HSV colors
 
-        // Note that in OpenCV, the HSV values have these valid ranges:
-        //the h range is 0 to 179
-        //the s range is 0 to 255
-        //the v range is 0 to 255
-
-        // This class will create filters to find red and find blue and find green.
+        // This class will create filters to find red, green and blue.
         // This is done by creating a range of H and S and V that selects each color.
-        // The HSV thresholds for each color (red, green, blue) are stored as a list of min HSV
-        // and a list of max HSV
+        // The HSV thresholds for each color (red, green, blue) are stored as a list
+        // of min HSV and a list of max HSV.
         List<Scalar> hsvMin = new ArrayList<>();
         List<Scalar> hsvMax = new ArrayList<>();
 
-        //hsvMin.add(new Scalar(  H,   S,   V  ));
+        // Note that in OpenCV, the HSV values have these valid ranges:
+        // H: 0 - 179, S: 0-255, V:0-255
+        // See https://docs.opencv.org/3.4.2/df/d9d/tutorial_py_colorspaces.html
+        // hsvMin.add(new Scalar(  H,   S,   V  ));
         hsvMin.add(new Scalar(300/2,  50, 150)); //red min
         hsvMax.add(new Scalar( 60/2, 255, 255)); //red max
 
