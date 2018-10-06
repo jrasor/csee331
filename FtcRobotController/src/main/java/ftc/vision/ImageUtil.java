@@ -100,7 +100,7 @@ public class ImageUtil {
   }
 
   /**
-   * Applys the Core.inRange function to a Mat after accounting for rollover
+   * Applies the Core.inRange function to a Mat after accounting for rollover
    * on the hsv hue channel.
    * @param srcHSV source Mat in HSV format
    * @param min Scalar that defines the min h, s, and v values
