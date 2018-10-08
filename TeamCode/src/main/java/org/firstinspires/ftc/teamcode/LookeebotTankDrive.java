@@ -47,10 +47,10 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp(name="Lookeebot: Teleop Tank", group="Lookeebot")
 //@Disabled
-public class LookieebotTankDrive extends OpMode{
+public class LookeebotTankDrive extends OpMode{
 
     /* Declare OpMode members. */
-    private Trainerbot robot       = new Trainerbot();  // Class created to define a Trainerbot's hardware
+    private Lookeebot robot       = new Lookeebot();  // Class created to define a Trainerbot's hardware
 
     /*
      * Code to run ONCE when the driver hits INIT
