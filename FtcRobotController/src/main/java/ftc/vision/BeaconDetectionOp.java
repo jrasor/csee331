@@ -20,6 +20,7 @@ public class BeaconDetectionOp extends LinearOpMode {
 
   @Override
   public void runOpMode() throws InterruptedException {
+    // This code could be made a method of a generic robot class.
     FrameGrabber frameGrabber = FtcRobotControllerActivity.frameGrabber;
 
     frameGrabber.grabSingleFrame(); //Try to grab a frame.
