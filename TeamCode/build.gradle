@@ -15,5 +15,5 @@
 apply from: '../build.common.gradle'
 
 dependencies {
-    implementation project(path: ':openCVLibrary342')
+  implementation project(path: ':openCVLibrary342')
 }

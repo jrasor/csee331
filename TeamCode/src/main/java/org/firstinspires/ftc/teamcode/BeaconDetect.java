@@ -15,7 +15,7 @@ import org.opencv.android.CameraBridgeViewBase;
  */
 @Autonomous(name="Beacon Detect", group="Trainerbot")
 //@Disabled
-public class BeaconDetectionOp extends LinearOpMode {
+public class BeaconDetect extends LinearOpMode {
 
   @Override
   public void runOpMode() throws InterruptedException {
@@ -23,16 +23,13 @@ public class BeaconDetectionOp extends LinearOpMode {
 
     frameGrabber.grabSingleFrame(); //Try to grab a frame.
     while (!frameGrabber.isResultReady()) { //Wait until it gets one.
-      Thread.sleep(5);
+      Thread.sleep(50);
     }
 
     // Process it for beacon color order left and right
     ImageProcessorResult imageProcessorResult = frameGrabber.getResult();
     BeaconColorResult result = (BeaconColorResult) imageProcessorResult.getResult();
-
-    BeaconColorResult.BeaconColor leftColor = result.getLeftColor();
-    BeaconColorResult.BeaconColor rightColor = result.getRightColor();
-
+    
     telemetry.addData("Result", result); // Report the color order string.
     telemetry.update();
     //wait before quitting, so Driver can read that telemetry report.

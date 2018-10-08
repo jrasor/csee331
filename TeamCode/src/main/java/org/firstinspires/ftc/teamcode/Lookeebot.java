@@ -61,7 +61,7 @@ public class Lookeebot
     static final double     WHEEL_DIAMETER_INCHES   = 5.0 ;
     static final double     DRIVE_WHEEL_SEPARATION  = 17.0 ;
     static final double     COUNTS_PER_INCH         = (COUNTS_PER_MOTOR_REV * DRIVE_GEAR_REDUCTION) /
-      (WHEEL_DIAMETER_INCHES * 3.1415);
+            (WHEEL_DIAMETER_INCHES * 3.1415);
 
     // Trainerbot specific motor and actuator members.
     public DcMotor  leftDrive   = null;
@@ -98,5 +98,4 @@ public class Lookeebot
         rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
- }
-
+}

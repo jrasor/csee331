@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
     private static final String TAG = "BeaconProcessor";
-    private static final double MIN_MASS = 6;
+    private static final double MIN_MASS = 1.0; // Minimum size of target colored objects
 
     @Override
     public ImageProcessorResult<BeaconColorResult> process(long startTime, Mat rgbaFrame, boolean saveImages) {
@@ -31,27 +31,39 @@ public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
         Imgproc.cvtColor(rgbaFrame, hsv, Imgproc.COLOR_RGB2HSV);
         // rgbaFrame is untouched; hsv now contains the same image but using HSV colors
 
-        // Note that in OpenCV, the HSV values have these valid ranges:
-        //the h range is 0 to 179
-        //the s range is 0 to 255
-        //the v range is 0 to 255
+        // This class will create filters to find yellow, green and white.
+        // This is done by creating HSV ranges that select each color.
+        // The HSV thresholds for each color (yellow, green, white) are stored as a list of min HSV
+        // and a list of max HSV.
 
-        // This class will create filters to find red and find blue and find green.
-        // This is done by creating a range of H and S and V that selects each color.
-        // The HSV thresholds for each color (red, green, blue) are stored as a list of min HSV
-        // and a list of max HSV
         List<Scalar> hsvMin = new ArrayList<>();
         List<Scalar> hsvMax = new ArrayList<>();
 
-        //hsvMin.add(new Scalar(  H,   S,   V  ));
-        hsvMin.add(new Scalar(300/2,  50, 150)); //red min
-        hsvMax.add(new Scalar( 60/2, 255, 255)); //red max
+        // Discriminator filters.
+        // Note that in OpenCV, the HSV values have these valid ranges:
+        // H: 0 - 179, S: 0-255, V:0-255
+        // See https://docs.opencv.org/3.4.2/df/d9d/tutorial_py_colorspaces.html
+        // hsvMin.add(new Scalar(  H,   S,   V  ));
+        hsvMin.add(new Scalar(  // yellow minimum
+                (int) (37 / 360.0 * 179.0),     // Reddest allowed yellow. Was 46.
+                (int) (0.60 * 255.0),           // Allow some pastel
+                (int) (0.50 * 255.0)));         // Allow some dimming. Was 0.50.
+        hsvMax.add(new Scalar(  // yellow max
+                (int) (66 / 360.0 * 179.0),     // Greenest allowed yellow
+                (int) (1.00 * 255.0),           // Pure color
+                (int) (1.00 * 255.0)));         // Fully illuminated
 
-        hsvMin.add(new Scalar( 60/2,  50, 150)); //green min
-        hsvMax.add(new Scalar(180/2, 255, 255)); //green max
+        hsvMin.add(new Scalar( 45,  50, 150));  // green min
+        hsvMax.add(new Scalar(75, 255, 255));   // green max
 
-        hsvMin.add(new Scalar(180/2,  50, 150)); //blue min
-        hsvMax.add(new Scalar(300/2, 255, 255)); //blue max
+        hsvMin.add(new Scalar( //white min
+                0,                              // Allow any color, as long as ...
+                (int) (0.00 * 255.0),           // ... it's really gray or white (unsaturated).
+                (int) (0.80 * 255.0)));         // Allow some dimming.
+        hsvMax.add(new Scalar( //white max
+                179,                            // Allow any color, as long as ...
+                (int) (0.20 * 255.0),           // ... it's close to white (pastel), and ...
+                (int) (1.00 * 255.0)));         // ... really bright.
 
         // make a list of channels that are blank (used for combining binary images)
         List<Mat> rgbaChannels = new ArrayList<>();
@@ -66,8 +78,8 @@ public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
         // So both sides start as unknown:
         int[] maxMassIndex = { 3, 3}; // index of the max mass
 
-        // We are about to loop over the filters and compute the "color mass" for each color
-        // on each side of the image.
+        // We are about to loop over the discriminator filters and compute the "color mass"
+        // for each color on each side of the image.
 
         // These variables are used inside the loop:
         Mat maskedImage;
@@ -77,7 +89,9 @@ public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
 
         //loop through the filters
         for(int i=0; i<3; i++) {
-            //apply HSV thresholds
+            // apply HSV thresholds to select only colors that pass the filters, and
+            // render them onto the image as ideal colors: red and blue for Relic
+            // Recovery; yellow and white for Rover Ruckus.
             maskedImage = new Mat();
             ImageUtil.hsvInRange(hsv, hsvMin.get(i), hsvMax.get(i), maskedImage);
 
