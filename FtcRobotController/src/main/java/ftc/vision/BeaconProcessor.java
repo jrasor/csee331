@@ -13,8 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Adapted by jmr FTC Team 5197 7/31/18 from a creation by
- * vandejd1 FTC Team EV 7393 on 9/7/16.
+ * v 0.1 Adapted by jmr FTC Team 5197 7/31/18 from a creation by
+ *       vandejd1 FTC Team EV 7393 on 9/7/16.
+ * v 0.2 Adapted by jmr to distinguish Rover Ruckus yellow (Gold Mineral) from white
+ *       (Silver Mineral).
  */
 public class BeaconProcessor implements ImageProcessor<BeaconColorResult> {
     private static final String TAG = "BeaconProcessor";
