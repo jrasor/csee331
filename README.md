@@ -62,3 +62,99 @@ modules swapped in for service in late-season Meets.
 
 Students of this course are then well-qualified to contribute to an intermediate
 or advanced FTC Team.
+
+## Bonjour!
+
+Ce référentiel GitHub contient le code source utilisé pour construire le code de formation du cours CSEE331 "Ingénierie robotique" de Don Bosco Tech. Il est basé sur le kit de développement logiciel FTC (SDK), disponible dans le [référentiel FTC SDK](https://github.com/ftctechnh/ftc_app/releases).
+
+Ouvrez-le dans Android Studio. C'est comme ça que ça a été développé.
+
+### Obtenir Ce Projet
+
+Pour obtenir notre code, téléchargez ou clonez à partir de notre [référentiel](https://github.com/jrasor/csee331).
+
+Si vous débutez avec le logiciel et le système de contrôle FIRST Tech Challenge, [consultez le Wiki FTC SDK](https://github.com/ftctechnh/ftc_app/wiki). Consultez de temps en temps car il contient les informations les plus récentes sur le logiciel et le système de contrôle FIRST Tech Challenge.
+
+### A propos de ce projet
+
+Le cours CSEE331 est conçu pour amener les élèves du secondaire au niveau de compétence nécessaire pour participer au concours FTC en tant que participants débutants.
+
+### Robot
+
+Ils commencent par exécuter un simple robot appelé "Trainerbot". Ensuite, ils désassemblent ses principaux sous-systèmes et le remettent en place. Ensuite, ils démontent le tout en vissant des écrous et des vis et l’assemblent tout en écrivant de la documentation sur la façon de le faire.
+
+Le robot comporte 3 sous-systèmes principaux:
+
+1. Le plateau électronique, contenant la batterie et les modules de contrôle.
+2. Le train roulant. Oui, la casserole électronique se bloque sous la transmission.
+3. La suite actionneur et capteur. Les actionneurs et les capteurs sont montés au sommet des membres transversaux de la transmission et peuvent facilement être déplacés.
+
+Tous ces sous-systèmes sont modulaires. Une équipe peut les échanger dans et dans leur puits, rendant possibles de multiples configurations. Par exemple, ils peuvent amener un certain nombre de trains d'entraînement à une réunion et en choisir un qui correspond aux forces de leurs alliés. Ils peuvent apporter un pan électronique de rechange et l’échanger en moins d’une minute. Les possibilités pour les suites d'actionneurs et de capteurs sont pratiquement illimitées.
+
+### Un autre robot
+
+Un autre robot d'entraînement est soutenu par ce projet, le "Lookeebot". C'est un groupe motopropulseur et un téléphone de contrôle, rien d'autre. C'est une plateforme de test pour la vision robotique. Il tourne simplement avec la caméra du téléphone et regarde des choses.
+
+### Les logiciels
+
+Le logiciel est ce projet. Il est construit à partir d’exemples d’opmodes extraits des exemples FtcRobotController fournis avec le SDK, ainsi que de ce projet. Il n'est pas particulièrement bien adapté à ce type de robot modulaire. Pour commencer, ce logiciel n'est pas très modulaire.
+
+* Certaines classes opmode contiennent des méthodes et des propriétés qui devraient être membres d'une classe robot. Il y a une duplication de code parmi eux.
+* Certains membres de la classe robot sont à différents niveaux de complexité et les plus complexes ne sont que partiellement construits sur les plus simples.
+
+Qu'est-ce que les étudiants sont supposés en faire, alors?
+
+1. Tout d'abord, lancez-le sur un Trainerbot et marquez-le lors d'une rencontre en début de saison.
+2. Ensuite, remédiez à ses lacunes avec des classes bien choisies utilisant l'abstraction, l'héritage, la surcharge, etc. Cela signifie apprendre la programmation orientée objet dans un cadre amusant et compétitif.
+3. Ils devraient être en mesure d'écrire de nouvelles classes et de les utiliser sur de nouveaux modules matériels mis en service pour les réunions de fin de saison.
+
+Les étudiants de ce cours sont alors bien qualifiés pour contribuer à une équipe FTC intermédiaire ou avancée.
+
+## Herzlich willkommen!
+
+Dieses GitHub-Repository enthält den Quellcode, der zum Erstellen des Trainingscodes für den Don Bosco Tech-Kurs CSEE331 "Robotics Engineering" verwendet wird. Es basiert auf dem FTC Software Development Kit (SDK), das im [FTC SDK-Repository verfügbar ist](https://github.com/ftctechnh/ftc_app/releases).
+
+Öffnen Sie es in Android Studio. So wurde es entwickelt.
+
+### Holen Sie sich dieses Projekt
+
+Um unseren Code zu erhalten, können Sie ihn aus [unserem Repository](https://github.com/ftctechnh/ftc_app/wiki)herunterladen oder klonen.
+
+Wenn Sie das FIRST Tech Challenge-Software- und Steuerungssystem noch nicht kennen, schauen Sie im [FTC SDK-Wiki nach](https://github.com/ftctechnh/ftc_app/wiki). Schauen Sie sich von Zeit zu Zeit dort vorbei, da es die aktuellsten Informationen über die FIRST Tech Challenge-Software und das Steuerungssystem enthält.
+
+### Über dieses Projekt
+
+Der CSEE331-Kurs soll Highschool-Studenten auf das Niveau bringen, das sie für den FTC-Wettbewerb als Anfänger benötigen.
+
+### Der Roboter
+
+Sie starten mit einem einfachen Roboter namens "Trainerbot". Dann zerlegen sie die wichtigsten Subsysteme und bauen sie wieder zusammen. Dann zerlegen sie das Ganze bis auf Schrauben und Muttern, bauen es zusammen und schreiben dabei Dokumentationen, wie das geht.
+
+Der Roboter hat 3 Hauptsubsysteme:
+
+1. Die Elektronikwanne mit Batterie und Steuermodulen.
+2. Der Antriebszug. Ja, die Elektronikpfanne hängt unter dem Antriebsstrang.
+3. Das Stellglied und die Sensorik. Aktuatoren und Sensoren sind auf den Querträgern des Antriebsstrangs montiert und können auf diesen leicht verschoben werden.
+
+Alle diese Subsysteme sind modular aufgebaut. Ein Team kann sie in ihrer Box ein- und auswechseln, wodurch mehrere Konfigurationen möglich werden. Zum Beispiel können sie eine Reihe von Antriebssträngen zu einem Meet bringen und einen auswählen, der den Stärken ihrer Allies entspricht. Sie können eine Ersatz-Elektronikpfanne mitbringen und diese in weniger als einer Minute eintauschen. Die Möglichkeiten für Aktor- und Sensor-Suiten sind nahezu unbegrenzt.
+
+### Ein anderer Roboter
+
+Ein weiterer Trainingsroboter wird von diesem Projekt unterstützt, der "Lookeebot". Es ist ein Antriebsstrang und ein Controller-Telefon, sonst nichts. Es ist eine Testplattform für Robotervision. Es läuft einfach mit der Kamera des Telefons herum und schaut sich Dinge an.
+
+### Die Software
+
+Die Software ist dieses Projekt. Es wird aus Beispielmodi aufgebaut, die den im SDK enthaltenen FtcRobotController-Beispielen sowie diesem Projekt entnommen wurden. Es ist für diesen Typ eines modularen Roboters nicht besonders gut geeignet. Für den Anfang ist diese Software nicht sehr modular.
+
+*Einige Opmode-Klassen enthalten Methoden und Eigenschaften, die Mitglieder einer Roboterklasse sein sollten. Es gibt einige doppelte Codes unter ihnen.
+*Einige Mitglieder der Roboterklasse haben unterschiedliche Komplexitätsgrade und die Komplexen sind nur teilweise auf den einfacheren aufgebaut.
+
+Was sollen die Schüler dann damit machen?
+
+1. Führen Sie es zuerst auf einem Trainerbot aus und punkten Sie damit bei einem frühen Saisonmeeting.
+2. Beheben Sie anschließend die Mängel mit gut ausgewählten Klassen, die Abstraktion, Vererbung, Überladung usw. verwenden. Dies bedeutet, objektorientiertes Lernen in einer unterhaltsamen und wettbewerbsfähigen Umgebung zu erlernen.
+3. Sie sollten in der Lage sein, neue Klassen zu schreiben und sie für neue Hardwaremodule zu verwenden, die in den späten Saison-Meets ausgetauscht werden.
+
+Die Studierenden dieses Kurses sind dann gut qualifiziert, um zu einem fortgeschrittenen oder fortgeschrittenen FTC-Team beizutragen.
+
+
