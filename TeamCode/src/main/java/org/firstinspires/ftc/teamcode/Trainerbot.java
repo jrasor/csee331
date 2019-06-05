@@ -46,9 +46,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * This robot class assumes the following device names have been configured on
  * the robot, meaning they are present in the robot configuration file:
  *
- * Motor channel:  Left  drive motor:        "motor0"
- * Motor channel:  Right drive motor:        "motor1"
- * Servo channel:  Servo to move paddle:     "paddle"
+ * Motor channel:  Left  drive motor:       "motor0"
+ * Motor channel:  Right drive motor:       "motor1"
+ * Servo channel:  Servo to move paddle:    "paddle"
  */
 
 public class Trainerbot
